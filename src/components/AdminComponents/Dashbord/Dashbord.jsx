@@ -1,5 +1,9 @@
 import React, { useEffect } from 'react';
 import Chart from 'chart.js/auto'; // Ensure you have Chart.js installed
+import DashMyTask from './DashMyTask';
+import DashActive from './DashActive';
+import DashLateTask from './DashLateTask';
+import DashUpComing from './DashUpComing';
 
 const Dashboard = () => {
     useEffect(() => {
@@ -73,7 +77,7 @@ const Dashboard = () => {
                 {/* Header */}
                 <div className="d-flex justify-content-between align-items-center mb-4 ">
                     <h2 className="mb-0">Dashboard</h2>
-                    <button className="btn btn-primary w-auto" style={{background:"#94d2cc",border:"none"}}>+ Add Project</button>
+                    {/* <button className="btn btn-primary w-auto" style={{background:"#94d2cc",border:"none"}}>+ Add Project</button> */}
                 </div>
                 {/* Stats Cards */}
                 <div className="row g-4 mb-4">
@@ -155,70 +159,31 @@ const Dashboard = () => {
                             <li className="nav-item">
                                 <a className="nav-link" href="#upcoming-tasks">
                                     Upcoming Tasks{" "}
-                                    <span className="badge bg-warning text-dark ms-1">5</span>
+                                    <span className="badge bg-warning text-dark ms-1">3</span>
                                 </a>
                             </li>
                         </ul>
                         <div className="tab-content">
                             <div className="tab-pane active" id="activity">
                                 <div className="activity-list">
-                                    <div className="activity-item d-flex align-items-start mb-4">
-                                        <i className="fa-solid fa-user avatar me-3" />
-                                        <div>
-                                            <h6 className="mb-1">Michael Anderson</h6>
-                                            <p className="mb-1">
-                                                Updated the design files for the landing page
-                                            </p>
-                                            <div className="activity-meta">
-                                                <span className="badge bg-primary me-2">Design</span>
-                                                <small className="text-muted">
-                                                    Project: Website Redesign
-                                                </small>
-                                                <small className="text-muted ms-3">2 hours ago</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="activity-item d-flex align-items-start">
-                                        <i className="fa-solid fa-user avatar me-3 d-flex justify-content-center align-items-center" />
-                                        <div>
-                                            <h6 className="mb-1">Sarah Wilson</h6>
-                                            <p className="mb-1">Completed the user research interviews</p>
-                                            <div className="activity-meta">
-                                                <span className="badge bg-success me-2">Research</span>
-                                                <small className="text-muted">
-                                                    Project: Marketing Campaign
-                                                </small>
-                                                <small className="text-muted ms-3">4 hours ago</small>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <DashActive/>
                                 </div>
                             </div>
                             <div className="tab-pane" id="my-tasks">
-                                <div className="no-data text-center py-5">
-                                    <i
-                                        className="fa-regular fa-clipboard text-muted mb-3 d-block"
-                                        style={{ fontSize: "3rem" }}
-                                    />
-                                    <h5 className="text-muted">No tasks assigned to you</h5>
+                                <div className="no-data text-center ">
+                                   
+                                    <DashMyTask/>
+                                
                                 </div>
                             </div>
                             <div className="tab-pane" id="late-tasks">
                                 <div className="no-data text-center py-5">
-                                    <i
-                                        className="fa-regular fa-clock text-muted mb-3 d-block"
-                                        style={{ fontSize: "3rem" }}
-                                    />
-                                    <h5 className="text-muted">No late tasks</h5>
+                                    <DashLateTask/>
                                 </div>
                             </div>
                             <div className="tab-pane" id="upcoming-tasks">
                                 <div className="no-data text-center py-5">
-                                    <i
-                                        className="fa-regular fa-calendar text-muted mb-3 d-block"
-                                        style={{ fontSize: "3rem" }}
-                                    />
-                                    <h5 className="text-muted">No upcoming tasks</h5>
+                                    <DashUpComing/>
                                 </div>
                             </div>
                         </div>

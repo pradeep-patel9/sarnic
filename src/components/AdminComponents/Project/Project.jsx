@@ -1,5 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import MyProject from './MyProject'
+import AllProject from './AllProject'
+import ActiveProject from './ActiveProject'
+import CompleteProject from './CompleteProject'
+import OnHoldProject from './OnHoldProject'
+
 
 const Project = () => {
   return (
@@ -176,45 +182,31 @@ const Project = () => {
     {/* My Projects Tab */}
     <div className="tab-pane fade" id="myprojects" role="tabpanel">
       <div className="empty-state">
-        <i className="fas fa-folder-open" />
-        <h4>No Projects Found</h4>
-        <p className="text-muted">
-          You don't have any projects assigned to you yet.
-        </p>
+        <MyProject/>
       </div>
     </div>
     {/* All Projects Tab */}
     <div className="tab-pane fade" id="allprojects" role="tabpanel">
       <div className="empty-state">
-        <i className="fas fa-project-diagram" />
-        <h4>No Projects Available</h4>
-        <p className="text-muted">There are no projects in the system.</p>
+      <AllProject/>
       </div>
     </div>
     {/* Active Tab */}
     <div className="tab-pane fade" id="active" role="tabpanel">
       <div className="empty-state">
-        <i className="fas fa-play-circle" />
-        <h4>No Active Projects</h4>
-        <p className="text-muted">
-          There are no active projects at the moment.
-        </p>
+        <ActiveProject/>
       </div>
     </div>
     {/* Completed Tab */}
     <div className="tab-pane fade" id="completed" role="tabpanel">
       <div className="empty-state">
-        <i className="fas fa-check-circle" />
-        <h4>No Completed Projects</h4>
-        <p className="text-muted">No projects have been completed yet.</p>
+        <CompleteProject />
       </div>
     </div>
     {/* On Hold Tab */}
     <div className="tab-pane fade" id="onhold" role="tabpanel">
       <div className="empty-state">
-        <i className="fas fa-pause-circle" />
-        <h4>No Projects On Hold</h4>
-        <p className="text-muted">There are no projects currently on hold.</p>
+       <OnHoldProject />
       </div>
     </div>
   </div>

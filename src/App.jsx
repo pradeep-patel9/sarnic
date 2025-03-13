@@ -13,6 +13,9 @@ import Production from "./components/AdminComponents/Production/Production";
 import CreateProduction from "./components/AdminComponents/Production/CreateProduction";
 import Traffic from "./components/AdminComponents/Traffic/Traffic";
 import CreateTrafficList from "./components/AdminComponents/Traffic/CreateTrafficList";
+import DesignerList from "./components/AdminComponents/Designer/DesignerList";
+import CreateDesignerList from "./components/AdminComponents/Designer/CreateDesignerList";
+import CreateNewJob from "./components/AdminComponents/Job/CreateNewJob";
 
 
 const App = () => {
@@ -48,6 +51,7 @@ const App = () => {
             {/* job */}
           <Route path="/job" element={<Job />} />
           <Route path="/excelimportjob" element={<ExcelImportJob />} />
+          <Route path="/createnewjob" element={<CreateNewJob />} />
             {/* job */}
 
             {/* production */}
@@ -59,6 +63,11 @@ const App = () => {
           <Route path="/traffic" element={<Traffic />} />
           <Route path="/createtrafficlist" element={<CreateTrafficList />} />
             {/* traffic */}
+
+            {/* Designer */}
+          <Route path="/designer" element={<DesignerList />} />
+          <Route path="/createdesigner" element={<CreateDesignerList />} />
+            {/* Designer */}
 
           </Routes>
         </div>

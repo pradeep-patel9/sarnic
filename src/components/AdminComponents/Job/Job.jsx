@@ -1,6 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import CreateNewJob from "./CreateNewJob";
+import MyJob from "./MyJob";
+import AppliedJob from "./AppliedJob";
+import Savedjob from "./Savedjob";
+import InterviewsJob from "./InterviewsJob";
+import ArchivedJob from "./ArchivedJob";
 
 const Job = () => {
   return (
@@ -94,10 +99,10 @@ const Job = () => {
               <div className="job-header">
                 <h4 className="mb-0">Jobs</h4>
                 <div className="d-flex gap-2">
-                  <a href="#" className="btn-add">
+                  <Link to="/createnewjob" className="btn-add">
                     <i className="fas fa-plus me-2" />
-                    Add Item
-                  </a>
+                    New Job
+                  </Link>
                   <Link to="/excelimportjob" className="btn-import">
                     <i className="fas fa-file-import me-2" />
                     Import
@@ -172,45 +177,31 @@ const Job = () => {
           {/* My Projects Tab */}
           <div className="tab-pane fade" id="myprojects" role="tabpanel">
             <div className="empty-state">
-              <i className="fas fa-folder-open" />
-              <h4>My Jobs</h4>
-              {/* <p className="text-muted">
-          You don't have any projects assigned to you yet.
-        </p> */}
+             <MyJob />
             </div>
           </div>
           {/* All Projects Tab */}
           <div className="tab-pane fade" id="allprojects" role="tabpanel">
             <div className="empty-state">
-              <i className="fas fa-project-diagram" />
-              <h4>Applied Jobs</h4>
-              {/* <p className="text-muted">There are no projects in the system.</p> */}
+              <AppliedJob />
             </div>
           </div>
           {/* Active Tab */}
           <div className="tab-pane fade" id="active" role="tabpanel">
             <div className="empty-state">
-              <i className="fas fa-play-circle" />
-              <h4>Saved Jobs</h4>
-              {/* <p className="text-muted">
-          There are no active projects at the moment.
-        </p> */}
+              <Savedjob />
             </div>
           </div>
           {/* Completed Tab */}
           <div className="tab-pane fade" id="completed" role="tabpanel">
             <div className="empty-state">
-              <i className="fas fa-check-circle" />
-              <h4>Saved Jobs</h4>
-              {/* <p className="text-muted">No projects have been completed yet.</p> */}
+              <InterviewsJob />
             </div>
           </div>
           {/* On Hold Tab */}
           <div className="tab-pane fade" id="onhold" role="tabpanel">
             <div className="empty-state">
-              <i className="fas fa-pause-circle" />
-              <h4>Archived</h4>
-              {/* <p className="text-muted">There are no projects currently on hold.</p> */}
+              <ArchivedJob />
             </div>
           </div>
           {/* create new job */}
