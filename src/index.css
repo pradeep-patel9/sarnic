@@ -1,0 +1,119 @@
+
+.Question {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.Question-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+.Question-h2 {
+    font-size: 18px;
+}
+
+.Question-select, button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.Question-button{
+    background: #FFD335;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.Question-button:hover {
+    background: white;
+    border: 1px solid black;
+}
+
+@media (min-width: 768px) { 
+    .Question {
+        flex-direction: row; 
+        justify-content: center;
+        margin-left: 0px;
+    }
+
+    
+    .Question-card {
+        width: 400px;
+        margin-left: 0px;
+        
+    }
+}
+
+@media (min-width: 1024px) {
+    .Question {
+        margin-left: 0px;
+        margin-left: 0px;
+    }
+}
+ 
+/* /* Abacus Maths */
+/* #canvasdiv {
+        width:100%;
+        margin:0 auto;
+        text-align:center;
+}
+   */
+
+
+
+/* Courses */
+
+.courses-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+    padding-top: 130px;
+}
+.courses-card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.452);
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+   
+}
+.courses-card:hover {
+    transform: translateY(-5px);
+}
+.courses-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 50px;
+}
+.courses-card h3 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+.courses-btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+}
+.btn:hover {
+    background-color: #0056b3;
+}
