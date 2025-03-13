@@ -42,114 +42,249 @@ body {
 }
 /* main-app-content-end */
 /* Login Start */
-.login-container{
-  height: 100vh;
+.main-login-container {
+  background-color: #f8f9fa;
+  min-height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
 }
-.login-left {
-  height: 100%;
-    width: 50%;
-    background: orange;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
+
+.login-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
 }
-.login-left img {
-    width: 300px;
+
+.form-control:focus {
+  border-color: #dee2e6;
+  box-shadow: 0 0 0 0.25rem rgba(148, 210, 204, 0.25);
 }
-.login-left h2 {
-    margin-top: 20px;
-    color: white;
-    font-size: 24px;
+
+.btn-login {
+  background: #94d2cc;
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  width: 100%;
+  transition: all 0.2s ease;
 }
-.login-left p {
-    color: white;
-    font-size: 16px;
-    margin-top: 10px;
+
+.btn-login:hover {
+  background: #94d2cc;
+  color: white;
+  transform: translateY(-1px);
 }
-.login-box-container {
-  height: 100%;
-    width: 50%;
-    padding: 40px;
-    background: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    text-align: left;
-    padding-top: 150px;
+
+.social-login {
+  border: 1px solid #dee2e6;
+  color: #6c757d;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  width: 100%;
+  transition: all 0.2s ease;
+  background: white;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
-.login-box-container h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    font-weight: bold;
+
+.social-login:hover {
+  background: #f8f9fa;
+  transform: translateY(-1px);
 }
-.login-input-label {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 5px;
-    display: block;
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 1.5rem 0;
+  color: #6c757d;
 }
-.login-input-field {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 30px;
-    font-size: 16px;
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #dee2e6;
 }
-.login-button {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    background: black;
-    color: white;
-    font-size: 16px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-weight: bold;
+
+.divider span {
+  padding: 0 1rem;
 }
-.login-forgot-password {
-    margin-top: 10px;
-    font-size: 14px;
-    text-align: center;
-    color: #666;
-    cursor: pointer;
+
+.form-floating>label {
+  color: #6c757d;
 }
-.login-logo {
-    text-align: right;
-    font-size: 18px;
-    font-weight: bold;
+
+.signup-link {
+  color: #6c757d;
+  text-decoration: none;
+  font-size: 0.875rem;
 }
-.login-logo span {
-    font-weight: normal;
-    font-size: 14px;
-    color: #666;
-    display: block;
+
+.signup-link:hover {
+  color: #94d2cc;
 }
-@media (max-width: 768px) {
-    .login-container {
-        flex-direction: column;
-    }
-    .login-left, .login-box-container {
-        width: 100%;
-    }
-    .login-box-container {
-    width: 100%;
-    height: 100%;
-    padding: 40px;
-    background: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    text-align: left;
-    padding-top: 140px;
+
+/* ////// */
+.main-signup-page {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
 }
-.login-left {
-  display: none;
+
+.signup-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow:  0 1px 3px rgba(0,0,0,0.05);
+  padding: 2rem;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
 }
+
+.form-control:focus {
+  border-color: #dee2e6;
+  box-shadow: 0 0 0 0.25rem rgba(148, 210, 204, 0.25);
 }
+
+.btn-signup {
+  background: black;
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.btn-signup:hover {
+  background: #333;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.social-signup {
+  border: 1px solid #dee2e6;
+  color: #6c757d;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  width: 100%;
+  transition: all 0.2s ease;
+  background: white;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.social-signup:hover {
+  background: #f8f9fa;
+  transform: translateY(-1px);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 1.5rem 0;
+  color: #6c757d;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.divider span {
+  padding: 0 1rem;
+}
+
+.form-floating > label {
+  color: #6c757d;
+}
+
+.login-link {
+  color: #6c757d;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.login-link:hover {
+  color: black;
+}
+
+.form-text {
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+.role-select {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.role-option {
+  flex: 1;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.role-option:hover {
+  background: #f8f9fa;
+  transform: translateY(-1px);
+}
+
+.role-option.active {
+  border-color: black;
+  background: #f8f9fa;
+}
+
+.role-option i {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #6c757d;
+}
+
+.role-option.active i {
+  color: black;
+}
+
+.role-option span {
+  display: block;
+  color: #6c757d;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.role-option.active span {
+  color: black;
+}
+
 /* login-page end */
 /* navbar-start */
 .navbar {

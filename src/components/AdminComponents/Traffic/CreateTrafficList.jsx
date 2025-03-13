@@ -5,7 +5,16 @@ const CreateTrafficList = () => {
     <>
       <div className="container">
         <div className="card form-container p-4 rounded-3 shadow-sm">
-          <h4 className="mb-4">Create Traffic List</h4>
+          <div className="header d-flex justify-content-between">
+            <h4 className="mb-4">Create Traffic List</h4>
+            <Link
+              to="/traffic"
+              className="btn-add"
+              style={{ height: "fit-content" }}>
+              <i className="fa-solid fa-backward me-2" />
+              Back
+            </Link>
+          </div>
           <form>
             <div className="row g-4">
               {/* Keyword and By Date */}

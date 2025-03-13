@@ -1,11 +1,21 @@
-import React from 'react'
+import React from "react";
 
 const CreateDesignerList = () => {
   return (
     <>
-    <div className="container">
+      <div className="container">
         <div className="card form-container p-4 rounded-3 shadow-sm">
-          <h4 className="mb-4">Designer List</h4>
+          <div className="header d-flex justify-content-between">
+            <h4 className="mb-4">Designer List</h4>
+            <Link
+              to="/designer"
+              className="btn-add"
+              style={{ height: "fit-content" }}>
+              <i className="fa-solid fa-backward me-2" />
+              Back
+            </Link>
+          </div>
+
           <form>
             <div className="row g-4">
               {/* Keyword and By Date */}
@@ -128,7 +138,7 @@ const CreateDesignerList = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default CreateDesignerList
+export default CreateDesignerList;
